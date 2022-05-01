@@ -4,6 +4,8 @@
 
 //new Set() 保证定义的常量type是唯一的
 export const GET_LIST = new Set()
-export const CHANGE_INPUT_VALUE = new Set() 
+export const GET_LIST_SAGA = `getListSaga`
+
+export const CHANGE_INPUT_VALUE = new Set()
 export const ADD_ITEM = new Set()
 export const DELETE_ITEM = new Set()

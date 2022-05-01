@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import store from './store'
-import { changeInputValueAction, addItemAction, deleteItemAction, getTodoList } from './store/actionCreator'
+import { changeInputValueAction, addItemAction, deleteItemAction, getListActionSaga } from './store/actionCreator'
 import TodoListUI from './TodoListUI';
 
 class TodoList extends Component {
   constructor(props) {
-    super(props)  
+    super(props)
     this.state = store.getState()
     this.changeInputValue = this.changeInputValue.bind(this)
     this.btnClick = this.btnClick.bind(this)
@@ -27,8 +27,9 @@ class TodoList extends Component {
   }
 
   componentDidMount() {
-    const action = getTodoList()
+    const action = getListActionSaga()
     store.dispatch(action)
+
   }
 
   changeInputValue(e) {
